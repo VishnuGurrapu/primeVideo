@@ -33,7 +33,12 @@ const SampleNextArrow = props => {
       className={`${className} next-arrow`}
       style={{...style}}
       onClick={onClick}
-    />
+      role="button" // Indicating that this div acts like a button
+      tabIndex="0" // Making it focusable via keyboard
+      aria-label="next"
+    >
+      {/* Optional: Add inner content here */}
+    </div>
   )
 }
 
@@ -44,8 +49,12 @@ const SamplePrevArrow = props => {
       className={`${className} prev-arrow`}
       style={{...style}}
       onClick={onClick}
-    />
+      role="button" // Indicating that this div acts like a button
+      tabIndex="0" // Making it focusable via keyboard
+      aria-label="previous"
+    >
+      {/* Optional: Add inner content here */}
+    </div>
   )
 }
-
 export default MoviesSlider
